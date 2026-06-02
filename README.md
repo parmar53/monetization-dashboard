@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚡ LiveOps Monetization Dashboard
 
-## Getting Started
+A high-performance, enterprise-grade LiveOps dashboard built to simulate real-world game studio monetization workflows — inspired by platforms like Xsolla. Built as a frontend showcase project demonstrating modern React/Next.js architecture, state management, animations, and responsive design.
 
-First, run the development server:
+## 🌐 Live Demo
+
+
+## 📸 Screenshots
+
+> Dashboard — Metric cards, revenue chart, and activity feed
+> Promotions — Filter tabs, animated table, and create modal
+> Segments — Player segmentation cards with live search
+
+## 🛠 Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 14 (App Router, SSR) |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 |
+| State Management | Redux Toolkit + React Query |
+| Animations | Framer Motion |
+| Charts | Recharts |
+| Forms | React Hook Form |
+| Icons | Lucide React |
+| Deployment | Vercel |
+
+## ✨ Features
+
+- 📊 **SSR Dashboard** — Metric cards and revenue chart rendered server-side with Next.js App Router
+- 🎯 **Promotions Manager** — Filter by status (Active/Scheduled/Expired), animated table rows, create new promotions via validated modal
+- 👥 **Player Segmentation** — Live search across segment cards with Redux state management
+- 🌗 **Theme Toggle** — Dark/Light mode with localStorage persistence and OS preference detection
+- 💀 **Skeleton Loading** — Theme-aware shimmer skeletons on all data components
+- 📱 **Fully Responsive** — Animated sidebar on desktop, hamburger menu on mobile
+- ✨ **Framer Motion** — Page animations, card entrances, sidebar hover effects, modal transitions
+
+## 🏃 Run Locally
 
 ```bash
+git clone https://github.com/parmar53/monetization-dashboard.git
+cd monetization-dashboard
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
+src/
+├── app/ # Next.js App Router pages (SSR)
+│ ├── page.tsx # Dashboard home
+│ ├── promotions/ # Promotions manager
+│ └── segments/ # Player segmentation
+├── components/
+│ ├── ui/ # Reusable: Sidebar, Skeleton
+│ ├── dashboard/ # MetricCard, RevenueChart, ActivityFeed
+│ └── promotions/ # CreatePromoModal
+├── store/ # Redux store + slices
+├── hooks/ # React Query data hooks
+├── lib/ # Mock data + ThemeContext
+└── types/ # Shared TypeScript interfaces
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## 🧠 Architecture Decisions
 
-To learn more about Next.js, take a look at the following resources:
+- **SSR vs Client:** Dashboard metrics use Next.js server components for fast initial load; interactive pages (Promotions, Segments) use client components for real-time interactivity
+- **Redux + React Query:** Redux manages UI state (filters, modal open/close); React Query handles async data fetching — clean separation of concerns
+- **Tailwind v4:** CSS-based config with `@variant dark` for class-driven theming without a config file
+- **Framer Motion:** Used for mount animations, layout transitions, and modal enter/exit — keeping interactions smooth and intentional
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 👨‍💻 Author
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Dhanrajsinh Parmar**
+[GitHub](https://github.com/parmar53)
