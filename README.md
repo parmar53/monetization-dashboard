@@ -3,9 +3,9 @@
 A high-performance, enterprise-grade LiveOps dashboard built to simulate real-world game studio monetization workflows — inspired by platforms like Xsolla. Built as a frontend showcase project demonstrating modern React/Next.js architecture, state management, animations, and responsive design.
 
 ## 🌐 Live Demo
+https://monetization-dashboardpro.vercel.app/
 
-
-## 📸 Screenshots
+## 📸 Highlights
 
 > Dashboard — Metric cards, revenue chart, and activity feed
 > Promotions — Filter tabs, animated table, and create modal
